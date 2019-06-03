@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Styles/Primary.css" rel="stylesheet" />
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Learning is<br/> Living
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/Index">Hjem</a>
+                </li>
+                <li>
+                    <a href="/TechTerms/Index">Fagtermer</a>
+                </li>
+                <li>
+                    <a href="/TechTerms/Create">Opret Fagterm</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+        @RenderBody()
+    </div>
+</body>
+</html>

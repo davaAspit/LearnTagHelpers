@@ -1,0 +1,27 @@
+﻿@page
+@model LearnTagHelpers.Pages.TechTerms.CreateModel
+@{
+    ViewBag.Title = "Opret fagterm";
+}
+
+<h1>Opret fagterm</h1>
+
+<div class="newTechTerm">
+    <form action="/TechTerms/Create" method="post">
+        @Html.AntiForgeryToken()
+        <label>Fagterm</label>
+        <input type="text" name="TechTerm.Name" />
+        <label>Beskrivelse</label>
+        <textarea name="TechTerm.Description"></textarea>
+        <input type="submit" value="Opret fagterm" />
+    </form>
+</div>
+@if (Model.TechTerm != null)
+{
+    <div class="techTerm">
+        @Model.TechTerm.Name
+        <hr />
+        @Model.TechTerm.Description
+    </div>
+}
+

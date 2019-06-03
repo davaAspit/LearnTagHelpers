@@ -1,0 +1,17 @@
+﻿@page
+@model LearnTagHelpers.Pages.TechTerms.IndexModel
+@{
+    ViewBag.Title = "Fagtermer";
+}
+
+<h1>Fagtermer</h1>
+<div class="techTermOverview">
+    @foreach (var term in Model.TechTerms)
+    {
+        <div class="techTerm">
+            @term.Name
+            <hr />
+            @term.Description
+        </div>
+    }
+</div>
